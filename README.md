@@ -29,7 +29,7 @@ How to start:
   - If you maintain a big wiki with lots of users using Community Twitter:
 		Register one app. The name of the application gets displayed under the tweet. You might want to call it like the wiki.
 
-	- If you maintain a manageable wiki with just a few users using Community Twitter:
+  - If you maintain a manageable wiki with just a few users using Community Twitter:
 		Register an application for each user who should be able to tweet on dev.twitter.com with read & write access.
 		The name of the application gets displayed under the tweet. Call it like the corresponding user and link to the user page 
 		(to let the extension link the user to his tweets). This is a cool way to have kind of a signature in order to guard against abuse.
@@ -85,20 +85,17 @@ How to start:
 
 5. Insert application data in the SQL table (e.g. via phpMyAdmin), depending on what you chose in the second step: 
 
-	- as user_id fill in the id of the user, who will be twittering via this app (look up in "user" table). If you chose to register just one app, set this to 0.
+- as user_id fill in the id of the user, who will be twittering via this app (look up in "user" table). If you chose to register just one app, set this to 0.
 	  (Note: joint and individual accounts must not be merged!)
-	- as acc_name a self-defined name identifying the twitter account (has to be consistent; if you run only one Twitter account, it's everywhere the same)
-	- consumer_key is the Consumer Key on dev.twitter.com for your app
-	- consumer_secret is the Consumer Secret on dev.twitter.com for your app
-	- access_token is the Access Token on dev.twitter.com for your app
-	- access_token_secret is the Access Token Secret on dev.twitter.com for your app
-	- set active whether the user should be able to tweet or not (0=false, 1=true)
+- as acc_name a self-defined name identifying the twitter account (has to be consistent; if you run only one Twitter account, it's everywhere the same)
+- consumer_key is the Consumer Key on dev.twitter.com for your app
+- consumer_secret is the Consumer Secret on dev.twitter.com for your app
+- access_token is the Access Token on dev.twitter.com for your app
+- access_token_secret is the Access Token Secret on dev.twitter.com for your app
+- set active whether the user should be able to tweet or not (0=false, 1=true)
 
-	Note: In case you registered two Twitter accounts, just connect the registered application to both accounts
-		  (see e.g. http://jeffmiller.github.com/2010/05/31/twitter-from-the-command-line-in-python-using-oauth).
-		  consumer_key and consumer_secret should be the same for each Twitter account in this case, 
-	      only access_token and access_token_secret vary!
-
+Note: In case you registered two Twitter accounts, just connect the registered application to both accounts (see e.g. http://jeffmiller.github.com/2010/05/31/twitter-from-the-command-line-in-python-using-oauth).
+	  consumer_key and consumer_secret should be the same for each Twitter account in this case, only access_token and access_token_secret vary!
 
 6. Create advice and description wiki pages. Their titles are defined in Twitter.i18n.php ("twitter_advice_template" and "twitter_description_template").
    These pages get displayed above (description) and under (advice) the Tweet! section.
