@@ -44,7 +44,7 @@ $wgtwitterIP = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['twitter'] = $wgtwitterIP . 'Twitter.i18n.php';
 $wgSpecialPages['twitter'] = 'twitter';
 // Define aliases.
-if(!empty($ctAliases))
+if(!empty($ctAliases)) {
 	foreach ($ctAliases as $alias) {
 		$wgSpecialPages[$alias] = 'twitter';
 	}
