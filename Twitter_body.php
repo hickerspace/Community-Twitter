@@ -60,6 +60,7 @@ class Twitter extends SpecialPage {
 		global $ctLong;
 		global $ctAllowedGroup;
 		global $individualAccs;
+		global $IP;
 
 		if (!isset($ctTableName) || !isset($ctDefaultAccount) || !isset($ctDisplayCoordinates)) die ("Configure LocalSettings.php first.");
 
@@ -70,7 +71,7 @@ class Twitter extends SpecialPage {
 		// Grant access to defined group only
 		if ($wgUser->getId() != 0 && in_array($ctAllowedGroup, $wgUser->getEffectiveGroups())) {
 
-			require_once("twitteroauth/twitteroauth.php");
+			require_once("{$IP}/twitteroauth/twitteroauth.php");
 
 			// Query for joint account(s)
 			$sql_joint = sprintf("SELECT app_name, consumer_key, consumer_secret, access_token, access_token_secret FROM %s ".
