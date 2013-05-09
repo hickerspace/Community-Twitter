@@ -71,7 +71,7 @@ class Twitter extends SpecialPage {
 		// Grant access to defined group only
 		if ($wgUser->getId() != 0 && in_array($ctAllowedGroup, $wgUser->getEffectiveGroups())) {
 
-			require_once("{$IP}/twitteroauth/twitteroauth.php");
+			require_once("{$IP}/includes/twitteroauth/twitteroauth.php");
 
 			// Query for joint account(s)
 			$sql_joint = sprintf("SELECT app_name, consumer_key, consumer_secret, access_token, access_token_secret FROM %s ".
