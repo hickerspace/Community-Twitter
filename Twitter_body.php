@@ -40,7 +40,6 @@ class Twitter extends SpecialPage {
 
 		// In case you want to change the name of the special page, you have to edit Twitter_body.php and Twitter.php
 		SpecialPage::SpecialPage("twitter");
-		wfLoadExtensionMessages("twitter");
 		$this->skin = $wgUser->getSkin();
 	}
 
@@ -247,7 +246,6 @@ class Twitter extends SpecialPage {
 		global $wgUser;
 		// if user is allowed, add link
 		if ( $wgUser->isAllowed( 'twitter' ) ) {
-			wfLoadExtensionMessages( 'twitter' );
 			$al = SpecialPage::getTitleFor( 'twitter' );
 			$href = $al->getLocalURL();
 			$twitter_vals = array(
