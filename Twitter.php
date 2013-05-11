@@ -43,9 +43,11 @@ $wgExtensionCredits['specialpage'][] = array(
 $wgtwitterIP = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['twitter'] = $wgtwitterIP . 'Twitter.i18n.php';
 $wgSpecialPages['twitter'] = 'twitter';
-// Define aliases
-foreach ($ctAliases as $alias) {
-	$wgSpecialPages[$alias] = 'twitter';
+// Define aliases.
+if(!empty($ctAliases)) {
+	foreach ($ctAliases as $alias) {
+		$wgSpecialPages[$alias] = 'twitter';
+	}
 }
 $wgHooks['PersonalUrls'][] = 'twitter::addURLToUserLinks';
 $wgAvailableRights[] = 'twitter';
