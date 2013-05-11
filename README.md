@@ -1,4 +1,3 @@
-
 Community Twitter Extension
 ===========================
 
@@ -64,7 +63,7 @@ How to start:
 
     CREATE TABLE IF NOT EXISTS `community_twitter` (
       `user_id` int(11) NOT NULL,
-      `acc_name` text NOT NULL,
+      `app_name` text NOT NULL,
       `consumer_key` text NOT NULL,
       `consumer_secret` text NOT NULL,
       `access_token` text NOT NULL,
